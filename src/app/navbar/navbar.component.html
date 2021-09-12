@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light" style="background-color: #ccddff;">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white; font-size: 25px" [routerLink]="['/']"><b>{{name}}</b></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="background-color: white"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link"  [routerLink]="['/disciplina']">Adicionar disciplinas</a>
+        <a class="nav-link"  [routerLink]="['/aulas']">Horário das aulas</a>
+        <a class="nav-link"  [routerLink]="['/notas']">Lista de notas</a>
+      </div>
+    </div>
+  </div>
+</nav>

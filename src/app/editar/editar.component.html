@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <h1>Adicionar disciplinas</h1>
+  <hr>
+
+<div class="principal" *ngFor="let d of this.disciplina.getList(), index as i">
+  <form>
+  <div class="mb-3">
+  <h4>{{d.titulo}}</h4>
+  <label >Nota da P1: </label>
+  <input #newP1 class="form-control" placeholder="{{d.p1}}" type="number" min="0" max="10" required>
+  </div>
+  <div class="mb-3">
+  <label>Nota da P2: </label>
+  <input #newP2 class="form-control" placeholder="{{d.p2}}" type="number" min="0" max="10" required>
+  </div>
+  </form>
+
+  <div class="center">
+  <button class="button2" (click)="this.alterar(i, newP1.value, newP2.value)" [routerLink]="['/notas']">Alterar</button></div>
+</div>
+</div>

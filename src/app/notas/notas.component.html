@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <h1>NOTAS - LISTA</h1>
+  <hr>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Matéria</th>
+    <th>P1</th>
+    <th>P2</th>
+    <th>Média</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let d of this.disciplina.getList(), index as i">
+    <td>
+      {{d.titulo}}
+    </td>
+    <td>
+      {{d.p1}}
+    </td>
+    <td>
+      {{d.p2}}
+    </td>
+    <td>
+       {{d.media}}
+    </td>
+    <td>
+      <button [routerLink]="['/editar']">Editar</button>
+    </td>
+    <td>
+      <button (click)="this.disciplina.remove(i)">X</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

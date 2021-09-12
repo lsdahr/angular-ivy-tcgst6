@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <h1>ADICIONAR DISCIPLINAS</h1>
+  <hr>
+<div class="principal">
+  <div class="mb-3">
+  <label>Título: </label>
+  <input #titulo class="form-control" type="text">
+  </div>
+  <div class="mb-3">
+  <label>Dia da semana: </label>
+  <input #semana class="form-control" type="text">
+  </div>
+  <div class="center">
+  <div class="mb-3">
+  <label>Horário: </label>
+  <input #horario class="form-control" type="time">
+  </div>
+  <div class="center">
+  <button class="button2"(click)="this.disciplina.add(semana.value,horario.value,titulo.value,'0','0','0');
+  semana.value='';horario.value='';titulo.value=''" [routerLink]="['/aulas']">Adicionar</button></div>
+</div>
+
+</div>
+    
+
